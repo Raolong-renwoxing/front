@@ -1,0 +1,19 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.ai-chat.desktop
+productName: Linang's AI 助手
+files:
+  - filter:
+      - dist/**/*
+      - dist-electron/**/*
+win:
+  target: nsis
+  icon: public/favicon.svg
+mac:
+  target: dmg
+  icon: public/favicon.svg
+linux:
+  target: AppImage
+  icon: public/favicon.svg
+electronVersion: 41.1.0
