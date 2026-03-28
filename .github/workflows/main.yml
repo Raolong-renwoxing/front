@@ -5,6 +5,7 @@ on:
     tags:
       - 'v*'
   workflow_dispatch:
+    if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
     inputs:
       version:
         description: 'Version tag (e.g., v1.0.0)'
